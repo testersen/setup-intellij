@@ -1,0 +1,6 @@
+*
+!/.gitignore
+!/action.yml
+!/index.js
+!/package-lock.json
+!/package.json
