@@ -1,0 +1,19 @@
+name: "ci"
+on:
+  - "push"
+jobs:
+  ci:
+    name: "ci"
+    if: github.repository == 'j4m350n/setup-intellij'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: "actions/checkout@v3"
+      - uses: "actions/setup-node@v3"
+        with:
+          node-version: 18
+      - run: npm ci
+      - run: npm i -g zx
+      - run: |
+          node .github/scripts/ci.js
+        env:
+          MSG: ${{ github.event.head_commit.message }}
