@@ -8,10 +8,8 @@ async function setup() {
 		`https://download-cdn.jetbrains.com/idea/ideaIC-${version}.tar.gz`,
 	);
 	core.info(`${tarball}`);
-	const pathToIdea =
-		(await tc.extractTar(tarball)) +
-		"/" +
-		require("fs").readdirSync(pathToIdea)[0];
+	const dir = await tc.extractTar(tarball);
+	const pathToIdea = dir + "/" + require("fs").readdirSync(dir)[0];
 	core.addPath(`${pathToIdea}/bin`);
 	core.info(`${pathToIdea}/bin`);
 }
