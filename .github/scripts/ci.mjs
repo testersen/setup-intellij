@@ -3,7 +3,7 @@
 const msg = process.env.MSG ? process.env.MSG.toLowerCase() : undefined;
 if (!msg) process.exit(0);
 
-const regex = /^v\=([0-9]+\.[0-9]+\.[0-9]+)$/i;
+const regex = /^v\=([0-9]+\.[0-9]+\.[0-9]+)$/;
 
 const v = msg.match(regex)?.[1];
 

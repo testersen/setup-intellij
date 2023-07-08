@@ -1,15 +1,15 @@
 {
   "name": "setup-intellij",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.10.0",
-    "@actions/tool-cache": "^2.0.1"
-  },
-  "devDependencies": {},
-  "description": ""
+    "@actions/core": "^1.10.0"
+  }
 }
