@@ -12,6 +12,13 @@ async function setup() {
 	const pathToIdea = await tc.extractTar(tarball);
 	core.addPath(`${pathToIdea}/bin`);
 	core.info(`${pathToIdea}/bin`);
+	core.info(
+		JSON.stringify(
+			require("fs").readdirSync(from, { recursive: true }),
+			null,
+			2,
+		),
+	);
 	core.endGroup();
 }
 
