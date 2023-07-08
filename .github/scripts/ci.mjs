@@ -16,6 +16,8 @@ await $`
 rm -rf node_modules/ .gitignore
 npm install
 git add .
+git config user.name github-actions
+git config user.email github-actions@github.com
 git commit -m release
 git tag -f v${v}
 git push -fu origin v${v}
