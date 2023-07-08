@@ -13,6 +13,10 @@ if (!v) {
 }
 
 await $`
+rm -rf node_modules/ .gitignore
+npm install
+git add .
+git commit -m release
 git tag -f v${v}
 git push -fu origin v${v}
 `;
