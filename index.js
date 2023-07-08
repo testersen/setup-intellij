@@ -8,6 +8,7 @@ async function setup() {
 	);
 	const pathToIdea = await tc.extractTar(tarball);
 	core.addPath(`${pathToIdea}/bin`);
+	console.log("Installed to %s", pathToIdea);
 }
 
 module.exports = setup;
