@@ -14,6 +14,6 @@ jobs:
       - run: npm ci
       - run: npm i -g zx
       - run: |
-          node .github/scripts/ci.js
+          node .github/scripts/ci.mjs
         env:
           MSG: ${{ github.event.head_commit.message }}
