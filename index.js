@@ -14,7 +14,7 @@ async function setup() {
 	core.info(`${pathToIdea}/bin`);
 	core.info(
 		JSON.stringify(
-			require("fs").readdirSync(from, { recursive: true }),
+			require("fs").readdirSync(pathToIdea, { recursive: true }),
 			null,
 			2,
 		),
