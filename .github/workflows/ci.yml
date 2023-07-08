@@ -1,11 +1,13 @@
 name: "ci"
 on:
   - "push"
+permissions:
+  contents: "write"
 jobs:
   ci:
     name: "ci"
     if: github.repository == 'j4m350n/setup-intellij'
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-latest"
     steps:
       - uses: "actions/checkout@v3"
       - uses: "actions/setup-node@v3"
